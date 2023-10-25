@@ -31,7 +31,7 @@ class Calibrator(Application):
     def _check_mini_map_pos(self, screenshot: MatLike = None):
         log.info('[小地图定位校准] 开始')
         if screenshot is None:
-            tp: TransportPoint = constants.map.P01_R04_SP03
+            tp: TransportPoint = constants.map.P01_R02_SP02
             op = Transport(self.ctx, tp, True)
             if not op.execute():
                 log.error('传送到支援舱段失败 小地图定位校准 失败')
