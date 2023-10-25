@@ -38,7 +38,11 @@ class Window:
         :return:
         """
         self.win.show()
-        self.win.activate()
+        try:
+            self.win.activate()
+        except:
+            self.win.minimize()
+            self.win.restore()
 
     def get_win_rect(self):
         """
